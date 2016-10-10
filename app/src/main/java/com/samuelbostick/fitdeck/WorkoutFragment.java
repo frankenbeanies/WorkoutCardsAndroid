@@ -9,6 +9,8 @@ import android.widget.Button;
 import android.widget.ProgressBar;
 import android.widget.TextView;
 
+import com.google.android.gms.ads.AdRequest;
+import com.google.android.gms.ads.AdView;
 import com.samuelbostick.jdeck.Card;
 import com.samuelbostick.jdeck.Deck;
 
@@ -53,11 +55,19 @@ public class WorkoutFragment extends Fragment {
         _view = v;
 
         nextCard();
+
+        AdView mAdView = (AdView) v.findViewById(R.id.adView);
+        AdRequest adRequest = new AdRequest.Builder().build();
+        mAdView.loadAd(adRequest);
+
         return v;
     }
 
     public void nextCard(){
-        if(_deck.size() <= 0) return;
+        if(_deck.size() <= 0){
+            ((MainActivity)getActivity()).inflateHomeFragment();
+            return;
+        }
 
         Card c = _deck.draw();
 
