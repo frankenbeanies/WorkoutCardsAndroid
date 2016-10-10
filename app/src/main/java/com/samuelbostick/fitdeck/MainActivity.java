@@ -24,18 +24,19 @@ public class MainActivity extends AppCompatActivity {
 
         FragmentManager fm = getSupportFragmentManager();
         FragmentTransaction ft = fm.beginTransaction();
-        ft.replace(R.id.activity_main, _hf);
+        ft.replace(R.id.activity_main, _hf, "HomeFragment");
         ft.commit();
     }
 
     public void inflateWorkoutFragment(){
         if(_wf == null){
-            _wf = WorkoutFragment.newInstance();
+            String[] suites = {"Push Ups", "Sit Ups", "Squats", "Flutter Kicks"};
+            _wf = WorkoutFragment.newInstance(suites);
         }
 
         FragmentManager fm = getSupportFragmentManager();
         FragmentTransaction ft = fm.beginTransaction();
-        ft.replace(R.id.activity_main, _wf);
+        ft.replace(R.id.activity_main, _wf, "WorkoutFragment");
         ft.commit();
     }
 }
