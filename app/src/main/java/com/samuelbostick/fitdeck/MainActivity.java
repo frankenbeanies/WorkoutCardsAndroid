@@ -14,14 +14,11 @@ public class MainActivity extends AppCompatActivity {
     HomeFragment _hf;
     WorkoutFragment _wf;
     InterstitialAd _interstitialAd;
-    boolean _isFirst = true;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-
-        _isFirst = true;
 
         MobileAds.initialize(getApplicationContext(), getString(R.string.ad_app_id));
 
@@ -50,14 +47,10 @@ public class MainActivity extends AppCompatActivity {
     public void inflateHomeFragment(){
         if(_hf == null){
             _hf = HomeFragment.newInstance();
-        }
-
-        if(!_isFirst){
+        }else{
             if(_interstitialAd.isLoaded()){
                 _interstitialAd.show();
             }
-        }else{
-            _isFirst = false;
         }
 
         FragmentManager fm = getSupportFragmentManager();
