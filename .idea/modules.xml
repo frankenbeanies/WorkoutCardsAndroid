@@ -3,7 +3,10 @@
   <component name="ProjectModuleManager">
     <modules>
       <module fileurl="file://$PROJECT_DIR$/FitDeck.iml" filepath="$PROJECT_DIR$/FitDeck.iml" />
+      <module fileurl="file://$PROJECT_DIR$/WorkoutCardsAndroid.iml" filepath="$PROJECT_DIR$/WorkoutCardsAndroid.iml" />
       <module fileurl="file://$PROJECT_DIR$/app/app.iml" filepath="$PROJECT_DIR$/app/app.iml" />
+      <module fileurl="file://$PROJECT_DIR$/app/app.iml" filepath="$PROJECT_DIR$/app/app.iml" />
+      <module fileurl="file://$PROJECT_DIR$/jdeck/jdeck.iml" filepath="$PROJECT_DIR$/jdeck/jdeck.iml" />
       <module fileurl="file://$PROJECT_DIR$/jdeck/jdeck.iml" filepath="$PROJECT_DIR$/jdeck/jdeck.iml" />
     </modules>
   </component>

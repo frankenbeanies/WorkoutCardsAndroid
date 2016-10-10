@@ -7,6 +7,7 @@ import android.os.Bundle;
 
 public class MainActivity extends AppCompatActivity {
     HomeFragment _hf;
+    WorkoutFragment _wf;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -16,14 +17,25 @@ public class MainActivity extends AppCompatActivity {
         inflateHomeFragment();
     }
 
-    private void inflateHomeFragment(){
+    public void inflateHomeFragment(){
         if(_hf == null){
             _hf = HomeFragment.newInstance();
         }
 
         FragmentManager fm = getSupportFragmentManager();
         FragmentTransaction ft = fm.beginTransaction();
-        ft.add(R.id.activity_main, _hf, "Home_Fragment");
+        ft.replace(R.id.activity_main, _hf);
+        ft.commit();
+    }
+
+    public void inflateWorkoutFragment(){
+        if(_wf == null){
+            _wf = WorkoutFragment.newInstance();
+        }
+
+        FragmentManager fm = getSupportFragmentManager();
+        FragmentTransaction ft = fm.beginTransaction();
+        ft.replace(R.id.activity_main, _wf);
         ft.commit();
     }
 }
