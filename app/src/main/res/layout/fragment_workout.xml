@@ -62,17 +62,15 @@
 
         <Button
             android:id="@+id/next_button"
-            android:layout_width="wrap_content"
+            android:layout_width="fill_parent"
             android:layout_height="wrap_content"
             android:layout_alignParentBottom="true"
             android:layout_centerHorizontal="true"
-            android:layout_marginBottom="10dp"
             android:text="@string/next_card"
-            android:textSize="18sp"
-            android:textStyle="bold"
+            android:textSize="22sp"
             android:textColor="#eee"
             android:textAllCaps="false"
-            android:padding="10dp"
+            android:padding="25dp"
             android:background="@color/colorPrimary"/>
 
     </RelativeLayout>
